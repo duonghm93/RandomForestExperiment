@@ -1,0 +1,25 @@
+strategy_name, auroc
+do_nothing,0.6984882744545315
+sort_by_hr,0.6916230868737283
+sort_by_dow,0.6915207893340624
+sort_by_fq,0.6916230868737283
+sort_by_recency,0.6917615452617469
+sort_by_inview_fq,0.6916230868737283
+sort_by_inview_recency,0.6916249086946233
+sort_by_elapsed_time_rt,0.6916230868737283
+sort_by_is_rt_any,0.6916230868737283
+sort_by_is_same_domain,0.6916230868737283
+sort_by_creative_type,0.6916230409454706
+sort_by_os,0.6916230868737283
+sort_by_prob_man,0.6916230868737283
+sort_by_ctr_user,0.691624510649722
+sort_by_inview_ratio,0.6917136114699639
+sort_by_ctr_slot,0.6916230868737283
+sort_by_iv_ctr_slot,0.6916230868737283
+sort_by_slot_category,0.6916230868737283
+sort_by_slot_site_type,0.6916370796829554
+sort_by_ctr_sp_slot,0.6919031114618804
+sort_by_iv_ctr_sp_slot,0.6916230868737283
+sort_by_sponsor_id,0.6916230868737283
+sort_by_slot_id,0.6916230868737283
+sort_by_is_click,0.6916230868737283
