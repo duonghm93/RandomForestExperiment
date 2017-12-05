@@ -32,7 +32,7 @@ def get_df_from_list_csv_files(filenames):
 
 
 if __name__ == '__main__':
-    train_size = 100
+    train_size = 10
     test_size = 10
     num_tree = 40
     max_depth=10

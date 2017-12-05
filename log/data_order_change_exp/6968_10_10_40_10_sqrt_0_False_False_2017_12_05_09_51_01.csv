@@ -1,0 +1,2 @@
+feature_order|auroc
+['hr', 'dow', 'elapsed_time_rt', 'is_rt_any', 'is_same_domain', 'creative_type', 'os', 'prob_man', 'ctr_user', 'inview_ratio', 'ctr_slot', 'iv_ctr_slot', 'slot_category', 'slot_site_type', 'ctr_sp_slot', 'iv_ctr_sp_slot'],0.7282778783300436
