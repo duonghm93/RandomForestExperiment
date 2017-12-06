@@ -15,16 +15,7 @@ def get_df_from_list_csv_files(filenames):
     return pd.concat(map(pd.read_csv, filenames))
 
 
-if __name__ == '__main__':
-    train_size = 10
-    test_size = 10
-    num_tree = 40
-    max_depth = 10
-    sub_feature = 'sqrt'
-    random_state = 0
-    bootstrap = False
-    oob_score = False
-
+def experiment(train_size, test_size, num_tree, max_depth, sub_feature, random_state, bootstrap, oob_score, max_permutation=200):
     str_detail = '{}_{}_{}_{}_{}_{}_{}_{}'.format(train_size, test_size, num_tree, max_depth, sub_feature, random_state,
                                                   bootstrap, oob_score)
 
@@ -45,10 +36,9 @@ if __name__ == '__main__':
     # features_column_names = constant.FEATURES_COLUMNS_NAMES
     label_column_name = 'is_click'
 
-    max_permutation = 1000
     permutations_of_features_cols = itertools.permutations(constant.FEATURES_COLUMNS_NAMES)
 
-    i=0
+    i = 0
     for features_column_names in permutations_of_features_cols:
         features_column_names = list(features_column_names)
         if i > max_permutation:
@@ -70,6 +60,21 @@ if __name__ == '__main__':
 
         print(features_column_names, ':', auroc)
         with open(log_file, 'a') as fp:
-            fp.write('{}|{}\n'.format(features_column_names,auroc))
+            fp.write('{}|{}\n'.format(features_column_names, auroc))
         i = i + 1
     print('EXIT SUCCESS !!!')
+
+
+if __name__ == '__main__':
+    train_size = 10
+    test_size = 10
+    # num_tree = 50
+    max_depth = 13
+    sub_feature = 'sqrt'
+    random_state = 0
+    bootstrap = False
+    oob_score = False
+    max_permutation = 100
+
+    for num_tree in range(10, 260, 10):
+        experiment(train_size, test_size, num_tree, max_depth, sub_feature, random_state, bootstrap, oob_score, max_permutation)
